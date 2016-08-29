@@ -1,0 +1,92 @@
+/* Documento CSS para pantallas */
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
+
+body {
+	background: black;
+	margin: 0 auto;
+	padding: 0;
+	max-width: 100%;
+	font-family: 'Open Sans', sans-serif;
+	color: #ffffff;
+	}
+
+/* Text */
+
+h1 {
+    font-size: 25px;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+/* header */
+
+header {
+	position: fixed;
+	z-index: 1;
+	display: block;
+	height: 75px;
+	background: #000; 
+	width: 100%;
+	top: 0;
+	transition: top 1.1s ease-in-out;
+	}
+.nav-up {
+	top: -75px;
+}	
+.container {
+    position: relative;
+    width: 96%;
+    left: 2%;
+    top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.mg-svg img {
+    height: 25px;
+}
+
+/* Body */
+
+article {
+	position: relative;
+	top: 75px;
+    line-height: 0;
+}
+table {
+    border-collapse: collapse;
+}
+td {
+    height: 100%;
+    padding: 0;
+}
+.mg-image img{
+    transition: all 1s ease;
+    max-width: 100%;
+}
+.mg-image:hover img{
+    transform: scale(1.1);
+}
+.mg-image{
+    width: auto;
+    height: auto;
+    overflow: hidden;
+}
+@media screen and (max-width: 600px) {
+	
+    header { height: 75px; background: #000; width: 100%; }
+    header div.hero { position: relative; top: 32px; left: 30px; }
+
+    td {
+        display: block;
+    }
+    .mg-image:hover img{
+    transition-property: none !important;
+    transform: none !important;
+    animation: none !important;
+    }
+    .mg-image {
+        overflow: visible;
+    }
+}
